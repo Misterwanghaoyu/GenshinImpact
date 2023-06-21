@@ -52,13 +52,8 @@ window.addEventListener(
         }
     }, 200) // 设置节流的时间间隔，单位为毫秒
 );
-
-
-
 export default {
-    components: {
-        Footer
-    },
+    components: {Footer },
     setup() {
         onMounted(() => {
             data.news_time = new Date().toLocaleString()
@@ -90,15 +85,9 @@ export default {
                 { title: "新闻", path: "/main/news/2" },
                 { title: "公告", path: "/main/news/3" },
                 { title: "活动", path: "/main/news/4" }]
-
         })
-        const goTopHandler = () => {
-            window.location.href = "#top"
-        }
-        return {
-            data,
-            goTopHandler
-        }
+        const goTopHandler = () => {window.location.href = "#top"}
+        return {data,goTopHandler}
     }
 };
 </script>

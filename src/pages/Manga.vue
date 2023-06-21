@@ -45,7 +45,7 @@
             </li>
             <li class="chapters_item">
                 <a href="https://ys.mihoyo.com/main/manga/detail/438?mute=1" class target="_blank">
-                    <img src="	https://uploadstatic.mihoyo.com/contentweb/20190603/2019060316192842647.jpg"
+                    <img src="https://uploadstatic.mihoyo.com/contentweb/20190603/2019060316192842647.jpg"
                         class="chapter_cover">
                     <div class="chapters_number">第五话 险地</div>
                 </a>
@@ -102,7 +102,7 @@
 
             <li class="chapters_item">
                 <a href="https://ys.mihoyo.com/main/manga/detail/3756?mute=1" class target="_blank">
-                    <img src="	https://uploadstatic.mihoyo.com/contentweb/20191212/2019121219370494421.jpg
+                    <img src="https://uploadstatic.mihoyo.com/contentweb/20191212/2019121219370494421.jpg
 " class="chapter_cover">
                     <div class="chapters_number">第十三话 再临</div>
                 </a>
@@ -138,7 +138,6 @@ export default {
     components:{
         Footer
     }
-
 }
 </script>
 <style lang="scss" scoped>

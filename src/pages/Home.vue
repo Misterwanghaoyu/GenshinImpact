@@ -1,6 +1,6 @@
 <template>
   <main class="root">
-    <div class="main" ref="MainNode" :style="{transform:`translateY(${data.currentY}%)`}">
+    <div class="main" ref="MainNode" :style="{ transform: `translateY(${data.currentY}vh)` }">
       <div class="page1">
         <a href="main" class="icon" target="_blank">
           <HoverImg
@@ -85,10 +85,12 @@
         </VideoShow>
       </div>
       <div class="page4">
-        <ActivityShow :ActivityShowProperty="data.activeActivityShowProperty" />
-        <div class="activitybar">
-          <HoverImg v-for="(item, index) in data.activitybariconList" :src1="item.src1" :src2="item.src2"
-            @click="chooseacitivity(index)" />
+        <div class="box">
+          <ActivityShow :ActivityShowProperty="data.activeActivityShowProperty" />
+          <div class="activitybar">
+            <HoverImg v-for="(item, index) in data.activitybariconList" :src1="item.src1" :src2="item.src2"
+              @click="chooseacitivity(index)" />
+          </div>
         </div>
       </div>
       <div class="page5">
@@ -108,51 +110,52 @@
         </div>
         <Swiper></Swiper>
       </div>
+      <Footer style="height: 100vh;"></Footer>
     </div>
   </main>
 </template>
 
 <script lang="ts">
-import { reactive,onMounted,ref } from 'vue'
+import { reactive, onMounted, ref } from 'vue'
 import HoverImg from '@/components/Home/HoverImg.vue'
 import CharacterShow from '@/components/Home/CharacterShow.vue'
 import VideoShow from '@/components/Home/VideoShow.vue'
 import ActivityShow from '@/components/Home/ActivityShow.vue'
 import Swiper from '@/components/Home/Swiper.vue'
-import {throttle1} from '@/util/DebounceAndThrottle.ts'
+import Footer from '@/components/Footer.vue'
+import { throttle1 } from '@/util/DebounceAndThrottle.ts'
 export default {
   components: {
     HoverImg,
     VideoShow,
     CharacterShow,
     ActivityShow,
-    Swiper
+    Swiper,
+    Footer
   },
   setup() {
-    const MainNode=ref()
-    onMounted(()=>{
-      const children=MainNode.value.childNodes.length
-      const unitY=100/children
-      
-      window.onwheel=throttle1((e:WheelEvent)=>{
-        if(e.deltaY>0){
-          console.log(data.currentY);
-          
+    const MainNode = ref()
+    onMounted(() => {
+      const children = MainNode.value.childNodes.length
+      window.onwheel = throttle1((e: WheelEvent) => {
+        if (e.deltaY > 0) {
           //下滑
-          if(data.currentY===-(children-1)*unitY)return
-          data.currentY-=unitY
-          console.log(data.currentY);
+          console.log(children);
+          
+          if (data.currentY === -(children - 2) * 100) return data.currentY=-children*100+100+55
+          if (data.currentY === -children*100+100+55) return
+          data.currentY -= 100
         }
-        else{
-          console.log(data.currentY,unitY);
+        else {
           //上滑
-          if(data.currentY===0)return
-          data.currentY+=unitY
+          if(data.currentY === -children*100+100+55) data.currentY=-(children - 1) * 100
+          if (data.currentY === 0) return
+          data.currentY += 100
         }
-      },1000)
+      }, 400)
     })
     const data = reactive({
-      currentY:0,
+      currentY: 0,
       showagepage: false,
       showvideo1: false,
       showvideo2: false,//page2的
@@ -324,10 +327,11 @@ export default {
   height: 100vh;
 
   overflow: hidden;
+
   .main {
     width: 100%;
+    transition: all 400ms ease-in-out;
 
-    transition: all 800ms ease-in-out;
     .page1 {
       width: 100%;
       height: 100vh;
@@ -446,16 +450,26 @@ export default {
       background-size: cover;
       position: relative;
       height: 100vh;
+      display: flex;
 
-      .activitybar {
-        position: absolute;
-        bottom: 12rem;
-        right: 26rem;
-        display: flex;
-        justify-content: space-between;
+      .box {
         align-items: center;
-        width: 25rem;
-        height: 6rem;
+        position: relative;
+        margin: auto auto 8.5rem auto;
+        justify-content: center;
+        display: flex;
+
+
+        .activitybar {
+          position: absolute;
+          bottom: 4.5rem;
+          right: 1.5rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 25rem;
+          height: 6rem;
+        }
       }
     }
 

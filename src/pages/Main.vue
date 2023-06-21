@@ -47,8 +47,8 @@
           <!-- 适龄页面 -->
           <div class="age-page" v-if="data.isShowAge">
             <div style="margin:auto; display: flex;align-items: flex-start;">
-              <img src="" alt="" style="height: 40rem;">
-              <img @click="data.isShowAge = false" src="" alt=""
+              <img src="https://ys.mihoyo.com/main/_nuxt/img/11e7a07.jpg" alt="" style="height: 40rem;">
+              <img @click="data.isShowAge = false" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADkAAAA5CAIAAAADehTSAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABOdJREFUeNrsWu1PW1UY730vBSzvG2xB6tKyRShEx8ucC1sRnFuWTpLFmGgWXaKf/Df86md16rIYP+xFIfNlSBgf9mHEzIyZOEgYWdZsVOnoWkpLe2/vxV9bt5X2ntt7bxmV2BvS3J7n9zzn13Oee87vORfq00+OW7bJRVu2z1XmWuZa5lrmup24strm2oad7t4jNE0L1gqaZlmO5zieZhhesNIMO31tbP7Pm/o7c768v9/jVeSkmIgrsixJYlISFSWZiK8pivLHb1OPH/1lnmu1vW7P3m6SddF319DAAI+fauHwS2351ntzM9pcC+RAKjThiq2Go5GQIa7Aw4vYFy8Ula+YaJIpFAyYyLmVUNBEX7q4MizRv7LKbrFQBqlSFbYqE33pzAH1eZGTkr2u8YDHa4gp8PCCr9F805cDtApAlpMMy+FmX/eBVw4O6yQKJPDp8eMQQa0vprhx5a05LVhrmKzE6u4b7Hj1UEGiwAD5bLoZFnEK9mX02doAUBQZi2sOpnfguKujRyMIrMDkRWYQLaelKK4sy2cRVQjTRB0cGmlzdqpGQDusqk8hoiFmVl9cUftWdDU8Mz256JtfXvLzgjD89ofYyVTIUvThY+9OjMYf3p/Pbt/1ohPtsKoGx8r/6w9fi4lEfVNzS6tTNYk39GKo3qqsth879XF1Tb2qNZmUrl78Ysnvy3xtam49euoj0mhFQss/X/w8Ggk/L+2C0OPffxVbXSEkDDc8ciYz8PjEPYkoIiCOIaKpJ3Kwz2XIAToDE/1Se5cqD6znDmfn8tLikPe0UGEjRIhdvfRl2Pi2Z0YTpvPsG0gkVavVVoURtRL2J3jBV1ujbLJ+Dfh9E2Pn8tdIjR0kszbDK/AkobdOa/t9C9d+/HZ9XdGJBxJ4eJWmLvAt3Lk+fgk09FAFEvhS1jB37/w+PXWlIAwYIEtfb83O3AgG/BoAWIH5T9SGUHp1jc0aAFiNqsfnwnX/62/t7eovCAMGyFJy7ewZcPce1gkGEvjScG139/UcMjZUwMNrq7k62rteGzxJqrckwpYGPLzgu3VcdzvaB46+o6H0Rs9/RtpF4QVfRNgKrjt2tXlOvE/S8Cuh5fHLZyPhID5xT6g1GERAnE3nSm1cfVqGTn5AUnopxXj5bCwaSam+aAT3JNWHCIiDaBp9GdaE/R6vq6PXaqtkGK6+qcVz4j3V4x1c8bUoyIUfP1N6YmINBYXD5WbVimmoxzZXJ/BQZK179rl7juzc7Xhwb858DUNTdJuzA39P9If61i8m4hOj5/JzFC1of3PkDC+o1Kj42W94Tz/9Ond7uqgckKTExifDkq9U5KQ0eeU8SemhHVa184t1itLqyzDXPIVK5YwsCtGpn77TVnqwApNdsqanKDdBcwDFjmt6aKkszQqld0GP0kurxwtP5wQRKCr3SZLE+OaO679rZOYY4sbk2MLsLZ0rDpDAZw5EVNdmUpWhl2uScE5G0wwKwNnbxpQe8PAinVuR+tLNVSL6S2LCxN4jy5KJvnRxXVeI81JT32SC6ws1DcR8U4rLAZGc79aKSnttoyGiwMOLPFHxos6zQsHAzeu/cLyAJEu/e2HSr2IEmqF5wVbbsCN7oyp4Af/o74diIqbIClaY1EsYWU69k1FkZFTBQ32q/P8DZa5lrmWuZa7/e67/CDAAp6wnixDFGekAAAAASUVORK5CYII=" alt=""
                 style="height: 3.5rem;cursor: pointer;">
             </div>
           </div>
@@ -95,7 +95,7 @@
             </ul>
           </div>
           <!-- .native监听原生事件 -->
-          <router-link to="/main/news"
+          <router-link to="/main/news/1"
             style="position:absolute;right:25px;bottom:25px;font-size: 18px;color: rgba(255,255,255,0.75);color: white;display: flex;background: url(data:image/png;base64,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UmVhZHlxyWU8AAADIWlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS42LWMxNDIgNzkuMTYwOTI0LCAyMDE3LzA3LzEzLTAxOjA2OjM5ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ0MgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkUyRDU3MTMyOEFEMDExRUE4QTkwRTJEMENFMkQwM0FFIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkUyRDU3MTMzOEFEMDExRUE4QTkwRTJEMENFMkQwM0FFIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RTJENTcxMzA4QUQwMTFFQThBOTBFMkQwQ0UyRDAzQUUiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RTJENTcxMzE4QUQwMTFFQThBOTBFMkQwQ0UyRDAzQUUiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7VsZz3AAAAXElEQVR42mL8f2W+FAMNAAuUfkZlc6WYGGgEBoXBpVBMUhgTA1SGXFAMc4NZcMQ+voiaiUXsDhB308LFjMS4uJuAS9NHU8XgTW64wB1ssU8Ng7tHRhhTvUIFCDAAaTsKe76jZj0AAAAASUVORK5CYII=) no-repeat;">
             <span style="margin-left:2rem;line-height:1.5rem;">查看全部资讯</span>
           </router-link>
@@ -109,6 +109,108 @@
     <Footer></Footer>
   </div>
 </template>
+
+<script lang="ts">
+import City from '@/components/Main/City.vue'
+import Footer from '@/components/Footer.vue'
+import { reactive,computed} from 'vue'
+export default {
+  components: { City,Footer },
+  setup() {
+    const data = reactive({
+      isShowAge: false,
+      isShowPV: false,
+      newslistindex:0,
+      tablinedistance: computed(()=>{
+        const distance:string='translateX(' + data.newslistindex * 72 + 'px)' 
+        return distance
+      }),
+      newsInfo: [
+        {
+          title: '最新',
+          content: [
+            '《原神》须弥前瞻短片03——明慧的序曲',
+            '提瓦特美食札记 | “日期…”——烟绯生日快乐！',
+            '烟绯生日快乐｜「祝贺生日的卡片」？嗯，很新奇的玩意儿嘛！',
+            '《原神》2.8版本「仲夏！幻夜？奇想曲！」活动速递第二期 ',
+            '《原神》「神铸赋形」活动祈愿即将开启'
+          ]
+        },
+        {
+          title: '新闻',
+          content: [
+            '《原神》小红书2.6版本创作者激励计划即将开启',
+            '《原神》快手2.6版本视频征集&直播招募活动即将开启',
+            '《原神》抖音2.6版本创作者激励计划&直播季即将开启',
+            '《原神》斗鱼直播2.6版本直播季活动即将开启',
+            '《原神》虎牙直播2.6版本直播季活动即将开启'
+          ]
+        },
+        {
+          title: '公告',
+          content: [
+            '八重神子索敌机制修复回退说明',
+            '《原神》「层峦千壑」璃月主题摄影活动今日开启',
+            '关于八重神子索敌机制的部分说明',
+            '《原神》「画外旅照」玩法说明',
+            '《原神》「画外旅照」活动即将开启'
+          ]
+        },
+        {
+          title: '活动',
+          content: [
+            '《原神》「神工天巧」活动即将开启',
+            '「岩港奇珍行记」网页活动说明',
+            '《原神》月夕祝颂-万份空月祝福相赠',
+            '“在尘世的相逢”抖音《原神》公测主播招募',
+            '“在尘世的相逢”快手直播《原神》主播招募活动开启'
+          ]
+        }
+      ],
+      cityInfo: [
+        {
+          name: '蒙德城',
+          to: '/main/character/Mondstadt?char=0',
+          bgSrc: "https://uploadstatic.mihoyo.com/contentweb/20200211/2020021114213984258.jpg",
+          characterSrc: "https://uploadstatic.mihoyo.com/contentweb/20220121/2022012117384457834.png"
+        },
+        {
+          name: '璃月港',
+          to: '/main/character/Liyue?char=0',
+          bgSrc: "https://uploadstatic.mihoyo.com/contentweb/20200515/2020051511071844630.jpg",
+          characterSrc: "https://uploadstatic.mihoyo.com/contentweb/20210624/2021062410110987203.png  "
+        },
+        {
+          name: '稻妻城',
+          to: '/main/character/Inazuma?char=0',
+          bgSrc: "https://uploadstatic.mihoyo.com/contentweb/20210720/2021072011394586258.jpg",
+          characterSrc: "https://uploadstatic.mihoyo.com/contentweb/20210719/2021071917013922761.png"
+        },
+        {
+          name: '须弥城',
+          to: '/main/character/Sumeru?char=0',
+          bgSrc: "https://webstatic.mihoyo.com/upload/contentweb/2022/08/15/b01e3edba8378a485bd2f8b2075e4e86_8655330006701981250.jpg",
+          characterSrc: "https://webstatic.mihoyo.com/upload/contentweb/2022/08/15/9ec9dfd134fa8701b8d25ed856303ea1_4280333980101063155.png"
+        },
+        {
+          name: '敬请期待',
+          to: '/main/character/Sumeru?char=0',
+          bgSrc: "https://ys.mihoyo.com/main/_nuxt/img/9a62be8.jpg",
+          characterSrc: ''
+        }
+      ]
+    })
+    const tabLineMove=(index:number)=> {
+      data.newslistindex=index
+    }
+    return{
+      data,
+      tabLineMove
+    }
+  }
+
+}
+</script>
 <style scoped>
 .mainView {
   width: 100%;
@@ -273,105 +375,3 @@ a{
   flex-direction: column;
 }
 </style>
-<script lang="ts">
-import City from '@/components/Main/City.vue'
-import Footer from '@/components/Footer.vue'
-import { reactive,computed} from 'vue'
-
-export default {
-  components: { City,Footer },
-  setup() {
-    const data = reactive({
-      isShowAge: false,
-      isShowPV: false,
-      newslistindex:0,
-      tablinedistance: computed(()=>{
-        const distance:string='translateX(' + data.newslistindex * 72 + 'px)' 
-        return distance
-      }),
-      newsInfo: [
-        {
-          title: '最新',
-          content: [
-            '《原神》须弥前瞻短片03——明慧的序曲',
-            '提瓦特美食札记 | “日期…”——烟绯生日快乐！',
-            '烟绯生日快乐｜「祝贺生日的卡片」？嗯，很新奇的玩意儿嘛！',
-            '《原神》2.8版本「仲夏！幻夜？奇想曲！」活动速递第二期 ',
-            '《原神》「神铸赋形」活动祈愿即将开启'
-          ]
-        },
-        {
-          title: '新闻',
-          content: [
-            '《原神》小红书2.6版本创作者激励计划即将开启',
-            '《原神》快手2.6版本视频征集&直播招募活动即将开启',
-            '《原神》抖音2.6版本创作者激励计划&直播季即将开启',
-            '《原神》斗鱼直播2.6版本直播季活动即将开启',
-            '《原神》虎牙直播2.6版本直播季活动即将开启'
-          ]
-        },
-        {
-          title: '公告',
-          content: [
-            '八重神子索敌机制修复回退说明',
-            '《原神》「层峦千壑」璃月主题摄影活动今日开启',
-            '关于八重神子索敌机制的部分说明',
-            '《原神》「画外旅照」玩法说明',
-            '《原神》「画外旅照」活动即将开启'
-          ]
-        },
-        {
-          title: '活动',
-          content: [
-            '《原神》「神工天巧」活动即将开启',
-            '「岩港奇珍行记」网页活动说明',
-            '《原神》月夕祝颂-万份空月祝福相赠',
-            '“在尘世的相逢”抖音《原神》公测主播招募',
-            '“在尘世的相逢”快手直播《原神》主播招募活动开启'
-          ]
-        }
-      ],
-      cityInfo: [
-        {
-          name: '蒙德城',
-          to: '/main/character/Mondstadt?char=0',
-          bgSrc: "https://uploadstatic.mihoyo.com/contentweb/20200211/2020021114213984258.jpg",
-          characterSrc: "https://uploadstatic.mihoyo.com/contentweb/20220121/2022012117384457834.png"
-        },
-        {
-          name: '璃月港',
-          to: '/main/character/Liyue?char=0',
-          bgSrc: "https://uploadstatic.mihoyo.com/contentweb/20200515/2020051511071844630.jpg",
-          characterSrc: "https://uploadstatic.mihoyo.com/contentweb/20210624/2021062410110987203.png  "
-        },
-        {
-          name: '稻妻城',
-          to: '/main/character/Inazuma?char=0',
-          bgSrc: "https://uploadstatic.mihoyo.com/contentweb/20210720/2021072011394586258.jpg",
-          characterSrc: "https://uploadstatic.mihoyo.com/contentweb/20210719/2021071917013922761.png"
-        },
-        {
-          name: '须弥城',
-          to: '/main/character/Sumeru?char=0',
-          bgSrc: "https://webstatic.mihoyo.com/upload/contentweb/2022/08/15/b01e3edba8378a485bd2f8b2075e4e86_8655330006701981250.jpg",
-          characterSrc: "https://webstatic.mihoyo.com/upload/contentweb/2022/08/15/9ec9dfd134fa8701b8d25ed856303ea1_4280333980101063155.png"
-        },
-        {
-          name: '敬请期待',
-          to: '/main/character/Sumeru?char=0',
-          bgSrc: "https://ys.mihoyo.com/main/_nuxt/img/9a62be8.jpg",
-          characterSrc: ''
-        }
-      ]
-    })
-    const tabLineMove=(index:number)=> {
-      data.newslistindex=index
-    }
-    return{
-      data,
-      tabLineMove
-    }
-  }
-
-}
-</script>

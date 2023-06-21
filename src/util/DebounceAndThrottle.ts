@@ -1,6 +1,6 @@
 function debounce (func:Function, delay:number, immediate:boolean) {
   let timeout:ReturnType<typeof setTimeout> | null = null // 创建一个标记用来存放定时器的返回值
-  return function (...args:Array<any>) {
+  return function (this:any,...args:Array<any>) {
     const context = this// this指向
     clearTimeout(timeout!)
     if (immediate) {
@@ -19,7 +19,7 @@ function debounce (func:Function, delay:number, immediate:boolean) {
 // 节流1(时间戳)(默认立即执行)
 function throttle1 (func:Function, delay:number,) {
   let oldTime = Date.now()
-  return function (...args:Array<any>) {
+  return function (this:any,...args:Array<any>) {
     const newTime = Date.now()
     if (newTime - oldTime >= delay) {
       func.apply(this, args)
@@ -31,7 +31,7 @@ function throttle1 (func:Function, delay:number,) {
 function throttle2 (func:Function, delay:number, immediate:boolean = false) {
   let flag = true
   if (immediate) {
-    return function (...args:Array<any>) {
+    return function (this:any,...args:Array<any>) {
       if (flag) {
         func.apply(this, args)
         flag = false
@@ -41,7 +41,7 @@ function throttle2 (func:Function, delay:number, immediate:boolean = false) {
       }
     }
   } else {
-    return function (...args:Array<any>) {
+    return function (this:any,...args:Array<any>) {
       if (flag) {
         flag = false
         setTimeout(() => {

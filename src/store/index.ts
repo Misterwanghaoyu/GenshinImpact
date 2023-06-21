@@ -7,7 +7,11 @@ export const useMainStore = defineStore("main", {
   //state必须是箭头函数（避免数据污染，和TS类型推导）
   state: () => {
     return {
-      isShowLogin:false
+      username:"",
+      password:"",
+      isShowLogin:false,
+      isLogin:false,
+      tips:""
     }
   },
   getters: {},

@@ -22,11 +22,15 @@
           src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAydpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDcuMS1jMDAwIDc5LmRhYmFjYmIsIDIwMjEvMDQvMTQtMDA6Mzk6NDQgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjNBMTNCQzMwNjk1MTExRUNBQ0ZDQjRDRjMxNzREOTQ2IiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjNBMTNCQzJGNjk1MTExRUNBQ0ZDQjRDRjMxNzREOTQ2IiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE4IChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjkxMTU3NzhFNEI0NzExRUNCOUEyOTdCQUJGQzVDQjIzIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjkxMTU3NzhGNEI0NzExRUNCOUEyOTdCQUJGQzVDQjIzIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+aJoX1wAAAvZJREFUeNqsl01IVFEUx99MM1iRjRoJobMwErFylRK0kOxrxoJoVbgIsk2LFkFfC2khSIu+iKKoRQzRQmpRBAUZmkEfZhRkmaAVooNQhISlSWj6+h/5D5wec997M7wDv3nvzj1z/++ee+bc+0K2bVs+LAw2gySoA1WgCETBBBgBfaAbPABTniOKsAtLwFEwZvu3SXAFxN3GdhNNghE7f/sNToKwX+EQaAPzdjD2GBR5CYvoDTt4ewdiWivkSK42cIr3f0AP6ATDoBDUgy2g3JEq4vsWPAJDTLyNoFH5vmKCzjiTK6nC+xw0GtZ+NWgF0/R9AhIuvufUzC84Q71UJdI9tuX77eA26ANd4AhYzr4DIAWibG8FN+n7lIm1TPnOgb9ggxY+RtGXYAV/0G5YrzTYp2a1Etw1+A6DBqUxCzoywmH+TyV0O+nU7pEsM+AgqAS9Hr7fwTpQwCUUWy8i29j4SNF6n5kqoZvw6XuHYx9m+0yYZVCsi9e9lj+T38Z4Py956uIr2V0KXrCdCLP2in3itcrK3UIe/YtBNZhkuyaCj0o2CtR/MmhhsWlGaSFaclPMRi2vr63gbQz0g1V6nSK8bwAl4Bb4GbDwNUZyj94Wx1X2tTD7mrm9BWEPWZDirAELJiJvlNMPUAsi4H1Awvupc19/KZtEChNvVmH5CtIs9ANgt1qOXEw2hV+gAoyDTaovLU/SZHjSQ3zS46yxuVg3KGSIsxWZlMW6PJWl8wtLna7lfuyZ2mSusz47LZEp9FcNg3xmPba428x6iPaAUtb/SwafQenPCMd5RspmQ2At/VpcRHu5U4nfRRe/JufR54SLszxlhYt4P2cq/eddxulkQv8nvIgHM5MNqLC3OkQzD3XWY3ssMx32YjxBmExE1tD3MhgF5T5mKpld53W8LeFJxGQflFgxr6dd/L9ljjt+DvRRzmDOMJhEZReopt+8y5qW5fomYfFJO/Iok4PM3lA+rzCaGjmucKamKIzy1LnD9Nqi+SfAAFLcgBA6a85mAAAAAElFTkSuQmCC"
           alt="">
       </a>
-      <div style="display: flex;align-items: center;cursor: pointer;" @click="showLogin">
+      <div v-if="!store.isLogin" style="display: flex;align-items: center;cursor: pointer;" @click="showLogin">
         <span>登录</span>
         <img
           src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTQyIDc5LjE2MDkyNCwgMjAxNy8wNy8xMy0wMTowNjozOSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTggKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkM4Q0U4MzlGNzIwQjExRTlCNzFCRjhGQzY5NjE1QzVEIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkM4Q0U4M0EwNzIwQjExRTlCNzFCRjhGQzY5NjE1QzVEIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QzhDRTgzOUQ3MjBCMTFFOUI3MUJGOEZDNjk2MTVDNUQiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QzhDRTgzOUU3MjBCMTFFOUI3MUJGOEZDNjk2MTVDNUQiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz59zFVZAAACLklEQVR42ryXzytEURTH33vGmPzOzxmmSbGSlaXt5D+QIqNYkKz8WCiSbFnJgiaysmCj+Bf4A6wQdkhK+ZFf0fU9Oq9er5l7zzVy6rOYeeec733v3XvOea5SyrGwCIiCGlDO/z2De/ABPsWZSNhAEYiDGfCq8tsr+8Q5RpvXJJoCu8redjnWWtgFQ6pwoxyeVLgYbKq/sy3OqRWmd5NVf2/Z8HsPC2cESeb5/ZUyLWBREJfJJ5wyBJ4bNgxduzTkSIWFaQPsaAIe+JiYTkGcffPZjr/ZggE66xWI+vQYciXIz+M6MqSpMWdg36K6HYATzfVhv3JFDBVpz+JuffYMFS7ice2NaVb45tjbh+YaaUU9Lvg6o+uupXC1KScJlxmcOkC9hWgdaDf4lHmCRAkwZiE8DpolbTEpLHtpwaZKC3MlHS57UqMzGsshGBOc36CVUvujqeLJsLODdgyWwTlPJG1gkveCxOiUVPgrnlX/Z6TluDxz0Qa6Fqz2CiyBQ3AHXkAJSII0mBM8uSZwI20Sp6AzV0MPTS0loBvcakYiT9oWF0DUsmRWgg1JW8w1CFB7G+A7cX6BGxoQMtLR55IbiFOA8KB09PGHvTUOWAG1vxCtDeRYlQx7wdUOBB7TCKgXCDaA0UBcXz5f1/AJk+Bi0c+/18ERuAAP3LUqQSvoAqPstw2mf45NAZ8wtP0bwZSgOEywr2fKa7rjsBVxwaA2WUXrBo9cTN7BlzTRtwADAOPsTPUcvaPqAAAAAElFTkSuQmCC"
           alt="">
+      </div>
+      <div v-else style="display: flex;align-items: center;position: relative;cursor: pointer;">
+        <span>{{ store.tips }}<span style="border-bottom: solid 3px white;padding-right: 0;">{{ store.username
+        }}</span></span>
       </div>
     </div>
     <audio autoplay loop :muted="data.ifmuteMusic" src="https://ys.mihoyo.com/main/_nuxt/medias/video-bgm.d8637316.mp3"
@@ -37,15 +41,12 @@
 <script lang="ts">
 
 import { reactive, computed } from 'vue'
-import {useMainStore} from '@/store'
-import { storeToRefs } from 'pinia'
-const sotre=useMainStore()
+import { useMainStore } from '@/store'
 export default {
   setup() {
-    const {isShowLogin}=storeToRefs(sotre)
+    const store = useMainStore()
     const data = reactive({
-      isShowLogin,
-      ifmuteMusic: true,
+      ifmuteMusic: false,
       navbarpropertyList: computed(() => {
         const list = [
           {
@@ -102,11 +103,12 @@ export default {
       }),
       currentIndex: 0
     })
-    const showLogin=()=>{
-      data.isShowLogin=true
+    const showLogin = () => {
+      store.isShowLogin = true
     }
     return {
       data,
+      store,
       showLogin
     }
   }
@@ -179,19 +181,20 @@ export default {
       text-align: center;
     }
 
-    a:hover{
+    a:hover {
       text-shadow: 0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff;
       color: #fff;
     }
   }
-  .nav_item.active a{
-text-shadow: 0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff;
-      color: #fff;
+
+  .nav_item.active a {
+    text-shadow: 0 0 10px #69e0ff, 0 0 20px #69e0ff, 0 0 40px #69e0ff;
+    color: #fff;
   }
 
-  @for $i from 1 through 7  {
+  @for $i from 1 through 7 {
     .nav_item:nth-child(#{$i}):hover~.scrollborder {
-      left: 1.5rem +  ($i - 1) * 6rem !important;
+      left: 1.5rem + ($i - 1) * 6rem !important;
     }
   }
 
