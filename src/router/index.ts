@@ -12,7 +12,15 @@ const routes = [
           { path: '/main/news/4', component: () => import("@/pages/NewsChildren/Activity.vue") },
         ]
       },
-      { path: '/main/character', component: () => import("@/pages/Character.vue") },
+      {
+        path: '/main/character', component: () => import("@/pages/Character.vue"), children: [
+          { path: '/main/character/Mondstadt', component: () => import("@/pages/CharacterView/Mondstadt.vue") },
+          { path: '/main/character/Liyue', component: () => import("@/pages/CharacterView/Liyue.vue") },
+          { path: '/main/character/Inazuma', component: () => import("@/pages/CharacterView/Inazuma.vue") },
+          { path: '/main/character/Sumeru', component: () => import("@/pages/CharacterView/Sumeru.vue") },
+          { path: '/main/character/Fontaine', component: () => import("@/pages/CharacterView/Fontaine.vue") }
+        ]
+      },
       { path: '/main/map', component: () => import("@/pages/Map.vue") },
       { path: '/main/manga', component: () => import("@/pages/Manga.vue") },
     ]

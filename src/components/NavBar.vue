@@ -8,9 +8,9 @@
     </div>
     <div class="nav">
 
-      <div class="nav_item" :class="{ active: item.isActive }" @click="data.currentIndex = index"
-        v-for="(item, index) in data.navbarpropertyList">
-        <RouterLink :to="item.url" @click="data.currentIndex = 0">{{ item.title }}</RouterLink>
+      <div class="nav_item" v-for="(item, index) in data.navbarpropertyList" :class="{ active: data.nav_index == index }"
+        @click="data.nav_active(index)">
+        <RouterLink :to="item.url">{{ item.title }}</RouterLink>
       </div>
       <div class="scrollborder" :style="{ left: data.scrollBorderleft }"></div>
     </div>
@@ -39,56 +39,47 @@
 </template>
 
 <script lang="ts">
-
+sessionStorage.setItem("nav_index","0")
 import { reactive, computed } from 'vue'
 import { useMainStore } from '@/store'
+import { onBeforeRouteUpdate } from 'vue-router'
 export default {
   setup() {
     const store = useMainStore()
     const data = reactive({
       ifmuteMusic: false,
-      navbarpropertyList: computed(() => {
-        const list = [
-          {
-            url: "/main",
-            title: "首页",
-            isActive: true
-          },
-          {
-            url: "/main/news/1",
-            title: "新闻",
-            isActive: false
-          },
-          {
-            url: "/main/character",
-            title: "角色",
-            isActive: false
-          },
-          {
-            url: "/main/map",
-            title: "世界",
-            isActive: false
-          },
-          {
-            url: "/main/manga",
-            title: "漫画",
-            isActive: false
-          },
-          {
-            url: "",
-            title: "社区",
-            isActive: false
-          },
-          {
-            url: "",
-            title: "赛事",
-            isActive: false
-          }
-        ]
-        list.some(item => { if (item.isActive === true) item.isActive = false })
-        list[data.currentIndex].isActive = true
-        return list
-      }),
+      nav_index: Number(sessionStorage.getItem("nav_index")),
+      navbarpropertyList: [
+        {
+          url: "/main",
+          title: "首页",
+        },
+        {
+          url: "/main/news/1",
+          title: "新闻",
+        },
+        {
+          url: "/main/character/Mondstadt?char=0",
+          title: "角色",
+        },
+        {
+          url: "/main/map",
+          title: "世界",
+        },
+        {
+          url: "/main/manga",
+          title: "漫画",
+        },
+        {
+          url: "",
+          title: "社区",
+        },
+        {
+          url: "",
+          title: "赛事",
+        }
+      ],
+      nav_active:(index:number)=>data.nav_index=index,
       imgSrc: computed(() => {
         let src: string = ""
         data.ifmuteMusic ?
@@ -97,11 +88,20 @@ export default {
           src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QzU2MUMyMjQ1RDI3MTFFOTlGNjlGQ0Y5MEYwNzU5RDQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QzU2MUMyMjU1RDI3MTFFOTlGNjlGQ0Y5MEYwNzU5RDQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpDMUVBQTk3RjVEMjcxMUU5OUY2OUZDRjkwRjA3NTlENCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpDMUVBQTk4MDVEMjcxMUU5OUY2OUZDRjkwRjA3NTlENCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PuGvQ5sAAAgdSURBVHja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'
         return src
       }),
+      //导航栏小滑条
       scrollBorderleft: computed(() => {
-        let left: string = String(1.5 + (data.currentIndex * 6) + "em")
+        let left: string = String(1.5 + (data.nav_index * 6) + "em")
         return left
       }),
-      currentIndex: 0
+    })
+    onBeforeRouteUpdate(to => {
+      
+      if (to.path.includes("news")) data.nav_index = 1  
+      else if (to.path.includes("character")) data.nav_index=2
+      else if (to.path.includes("map")) data.nav_index = 3
+      else if (to.path.includes("manga")) data.nav_index = 4
+      else data.nav_index = 0
+      sessionStorage.setItem("nav_index",String(data.nav_index))
     })
     const showLogin = () => {
       store.isShowLogin = true
@@ -230,4 +230,5 @@ export default {
   img {
     margin-right: 10px;
   }
-}</style>
+}
+</style>

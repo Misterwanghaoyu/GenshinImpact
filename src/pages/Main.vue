@@ -193,6 +193,12 @@ export default {
           characterSrc: "https://webstatic.mihoyo.com/upload/contentweb/2022/08/15/9ec9dfd134fa8701b8d25ed856303ea1_4280333980101063155.png"
         },
         {
+          name: '枫丹廷',
+          to: '/main/character/Fontaine?char=0',
+          bgSrc: "https://act-webstatic.mihoyo.com/upload/contentweb/hk4e/f3ac9aac39dd292a18d79cd5fe3f37ff_431332308480891397.jpg",
+          characterSrc: "https://act-webstatic.mihoyo.com/upload/contentweb/hk4e/826bcfa79f4c46c9c63b4c2bcd117f78_2311645273450413299.png"
+        },
+        {
           name: '敬请期待',
           to: '/main/character/Sumeru?char=0',
           bgSrc: "https://ys.mihoyo.com/main/_nuxt/img/9a62be8.jpg",
